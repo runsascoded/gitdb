@@ -248,7 +248,7 @@ class LazyMixin(object):
     def __getattr__(self, attr):
         """
         Whenever an attribute is requested that we do not know, we allow it
-        to be created and set. Next time the same attribute is reqeusted, it is simply
+        to be created and set. Next time the same attribute is requested, it is simply
         returned from our dict/slots. """
         self._set_cache_(attr)
         # will raise in case the cache was not created
